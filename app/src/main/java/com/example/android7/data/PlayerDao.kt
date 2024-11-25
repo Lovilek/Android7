@@ -13,7 +13,11 @@ interface PlayerDao {
     @Insert
     suspend fun insertPlayer(player: Player) // Указываем Player
 
-    @Query("INSERT INTO players (name, team) VALUES ('Cristiano','Alnasr' )")
+    @Query("INSERT INTO players (name, team) VALUES ('Messi','Inter' )")
     suspend fun insertPlayerDirectly()
+
+    @Query("DELETE FROM players")
+    suspend fun clearAllPlayers()
+
 
 }
