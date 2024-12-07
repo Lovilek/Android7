@@ -19,5 +19,9 @@ interface PlayerDao {
     @Query("DELETE FROM players")
     suspend fun clearAllPlayers()
 
+    @Insert
+    suspend fun insertPlayers(players: List<Player>) // Этот метод добавляет список игроков
+
+
 
 }
